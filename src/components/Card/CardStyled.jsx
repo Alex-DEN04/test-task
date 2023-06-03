@@ -10,6 +10,8 @@ export const Card = styled.li`
   width: 340px;
   height: 440px;
   padding: 20px;
+  margin: 0;
+  margin-bottom: 15px;
   background-image: url(${fon}),
     linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
   background-repeat: no-repeat;

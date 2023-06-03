@@ -21,7 +21,7 @@ export const UsersList = () => {
   return (
     <Cards>
           <UserCard items={users} />
-          <Button onClick={LoadMore}>Load more</Button>
+          {ac < 12 && <Button onClick={LoadMore}>Load more</Button>}
     </Cards>
   );
 };

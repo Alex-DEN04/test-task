@@ -13,10 +13,12 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   padding: 10px 20px;
   width: 200px;
   height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
