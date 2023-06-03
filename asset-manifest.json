@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/test-task/static/js/main.fc9592bf.js",
+    "index.html": "/test-task/index.html",
+    "main.fc9592bf.js.map": "/test-task/static/js/main.fc9592bf.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fc9592bf.js"
+  ]
+}
