@@ -1,7 +1,7 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import {
-  FollowingBtn,
+//   FollowingBtn,
   FollowBtn,
   Card,
   Logo,
@@ -12,8 +12,8 @@ import {
 import logo from '../../images/logo.png';
 
 export const UserCard = ({ items }) => {
-    const [following, setFollowing] = useState(true)
-    const [followers, setFollowers] = useState()
+    // const [following, setFollowing] = useState(true)
+    // const [followers, setFollowers] = useState()
     const onClickHandler = (value) => {
         
     }
