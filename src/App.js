@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { Home } from 'pages/Home';
+import { Home } from 'pages/Home/Home';
 import { Tweets } from 'pages/Tweets/Tweets';
-import { AppBar } from 'components/AppBar';
+import { AppBar } from 'components/AppBar/AppBar';
 
 function App() {
   return (

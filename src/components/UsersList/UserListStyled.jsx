@@ -4,10 +4,33 @@ export const Cards = styled.ul`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
-  margin-left: auto;
-  margin-right: auto;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding: 10px 20px;
+  width: 200px;
+  height: 50px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  color: #ffff;
+  text-transform: uppercase;
+  background-color: #a593e3;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  border-color: transparent;
+  :hover,
+  :focus {
+    background-color: #6c5ca4;
+  }
 `;

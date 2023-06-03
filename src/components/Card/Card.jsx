@@ -1,4 +1,5 @@
-// import { useState } from 'react';
+// import { useState, useEffect } from 'react';
+// import { useEffect, useState } from 'react';
 
 import {
 //   FollowingBtn,
@@ -10,23 +11,39 @@ import {
   Avatar,
 } from './CardStyled';
 import logo from '../../images/logo.png';
+// import { fetchUsers } from 'API';
 
-export const UserCard = ({ items }) => {
-    // const [following, setFollowing] = useState(true)
-    // const [followers, setFollowers] = useState()
-    const onClickHandler = (value) => {
+export const UserCard = ({items}) => {
+    // const [users, setUser] = useState([]);
+    // const [follow, setFollow] = useState()
+
+//     useEffect(() => {
+//         const getUsers = async () => {
+//         const data = await fetchUsers();
+//             setUser(data);
+//         // setFollow()
+//     };
+//     getUsers();
+//   }, []);
+  
+    // const onClickHandler = (value) => {
+    //     // console.dir(value)
+    //     setFollow(value + 1)
+    //     if (value < follow) {
+    //         setFollow(value - 1)
+    //     }
         
-    }
-
+    // }
+    
   return (
     <>
-      {items && items.map(item => (
-        <Card key={item.id}>
-          <Logo src={logo} alt="" />
-          <TweetsCounter>{item.tweets} tweets</TweetsCounter>
-          <FollowersCounter>{item.followers} followers</FollowersCounter>
-              <Avatar src={item.avatar}></Avatar>
-              <FollowBtn onClick={onClickHandler}>Follow</FollowBtn>
+      {items && items.map(({id, tweets, followers, avatar}) => (
+        <Card key={id}>
+          <Logo src={logo} alt="logo" />
+          <TweetsCounter>{tweets} tweets</TweetsCounter>
+          <FollowersCounter>{followers} followers</FollowersCounter>
+              <Avatar src={avatar}></Avatar>
+              <FollowBtn type='button' onClick={() => console.log(items)}>Follow</FollowBtn>
           {/* {following ? <FollowingBtn>Following</FollowingBtn> : <FollowBtn>Follow</FollowBtn>} */}
         </Card>
       ))}

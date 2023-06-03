@@ -7,8 +7,8 @@ export const Card = styled.li`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 360px;
-  height: 460px;
+  width: 340px;
+  height: 440px;
   padding: 20px;
   background-image: url(${fon}),
     linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
@@ -84,6 +84,7 @@ export const TweetsCounter = styled.p`
   margin-top: 264px;
   color: #ebd8ff;
 `;
+
 export const FollowersCounter = styled.p`
   font-family: 'Montserrat';
   font-style: normal;
@@ -116,6 +117,7 @@ export const FollowingBtn = styled.button`
   background-color: #5cd3a8;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
+  border-color: transparent;
   :hover,
   :focus {
     background-color: #31ae80;
@@ -142,6 +144,7 @@ export const FollowBtn = styled.button`
 background-color: #EBD8FF;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
+  border-color: transparent;
   :hover,
   :focus {
     background-color: #ceb6e8;
