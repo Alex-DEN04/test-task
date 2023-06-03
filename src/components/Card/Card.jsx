@@ -1,5 +1,4 @@
 // import { useState, useEffect } from 'react';
-// import { useEffect, useState } from 'react';
 
 import {
 //   FollowingBtn,
@@ -11,21 +10,9 @@ import {
   Avatar,
 } from './CardStyled';
 import logo from '../../images/logo.png';
-// import { fetchUsers } from 'API';
 
 export const UserCard = ({items}) => {
-    // const [users, setUser] = useState([]);
-    // const [follow, setFollow] = useState()
-
-//     useEffect(() => {
-//         const getUsers = async () => {
-//         const data = await fetchUsers();
-//             setUser(data);
-//         // setFollow()
-//     };
-//     getUsers();
-//   }, []);
-  
+   console.log(items)
     // const onClickHandler = (value) => {
     //     // console.dir(value)
     //     setFollow(value + 1)
@@ -34,7 +21,7 @@ export const UserCard = ({items}) => {
     //     }
         
     // }
-    
+    // (followers.slice(0, 3),followers.slice(3, 6))
   return (
     <>
       {items && items.map(({id, tweets, followers, avatar}) => (
