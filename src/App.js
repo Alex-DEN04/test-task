@@ -3,9 +3,9 @@
 
 function App() {
   return (
-    <p>
+    <div>
       Hello World
-    </p>
+    </div>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
