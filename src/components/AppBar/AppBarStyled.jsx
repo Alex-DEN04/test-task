@@ -18,11 +18,11 @@ export const Link = styled(NavLink)`
 `;
 
 export const Navigate = styled.nav`
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 15px;
-    width: 1170px;
-    margin: 0;
-`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 15px;
+  width: 1170px;
+  margin: 0;
+`;

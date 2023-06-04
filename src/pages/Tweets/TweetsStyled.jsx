@@ -31,4 +31,4 @@ export const Wrap = styled.section`
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-`
+`;

@@ -127,7 +127,7 @@ export const FollowingBtn = styled.button`
 `;
 
 export const FollowBtn = styled.button`
-    display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -143,7 +143,7 @@ export const FollowBtn = styled.button`
   margin-top: 26px;
   color: #373737;
   text-transform: uppercase;
-background-color: #EBD8FF;
+  background-color: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   border-color: transparent;
@@ -151,4 +151,4 @@ background-color: #EBD8FF;
   :focus {
     background-color: #ceb6e8;
   }
-`
+`;

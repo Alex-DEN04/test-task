@@ -12,7 +12,7 @@ export const Wrap = styled.section`
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
-  
+
   text-decoration: none;
   color: black;
-`
+`;

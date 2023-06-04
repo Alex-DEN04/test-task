@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, Navigate } from './AppBarStyled'
+import { Link, Navigate } from './AppBarStyled';
 
 export const AppBar = () => {
   return (
