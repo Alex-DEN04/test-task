@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   FollowingBtn,
   FollowBtn,
@@ -36,4 +38,9 @@ export const UserCard = ({ items, onClick }) => {
         ))}
     </>
   );
+};
+
+UserCard.propTypes = {
+  item: PropTypes.objectOf(PropTypes.string),
+  onClick: PropTypes.func,
 };
