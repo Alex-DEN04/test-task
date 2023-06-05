@@ -6,56 +6,61 @@ import { fetchUsers } from 'API';
 
 export const UsersList = () => {
   const [users, setUser] = useState([]);
-  const [ac, setAc] = useState(3);
-  // const [follow, setIsFollow] = useState(false)
-
+  const [ac, setAc] = useState(Number((JSON.parse(localStorage.getItem('acum')))) || 3);
+  // (JSON.parse(localStorage.getItem('acum')))
+  // Number((JSON.parse(localStorage.getItem('acum'))))
   useEffect(() => {
-    const getUsers = async () => {
-      const data = await fetchUsers();
-      setUser(data.slice(0, ac));
-    };
-    getUsers();
+    try {
+      const getUsers = async () => {
+        const data = await fetchUsers();
+        setUser(data.slice(0, ac));
+      };
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
   }, [ac]);
   const LoadMore = () => {
-    setAc(ac + 3);
+    setAc(ac => {
+      ac+=3
+      JSON.stringify(localStorage.setItem('acum', `${ac}`));
+      return ac
+    });
   };
 
-  const onClickHandler = (id) => {
-    // console.log(event)
-    // console.log(items)
-    // const use = users.find(item => item.id === id)
-    // use.followers += 1
-    // console.log(use.followers)
-    // console.log(users)
-    // console.log(following)
-    // setUser(users => [use, ...users]);
-    // console.log(object)
-    const use = users.find(item => item.id === id)
+  // const res = (id) => {
+  //   try {
+  //       const addUsers = async () => {
+  //         await postUsers(id)
+  //       }
+  //       addUsers()
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  // }
+
+  const onClickHandler = id => {
+    const use = users.find(item => item.id === id);
     if (!use.isFollow) {
       setUser(users => {
-        use.followers = use.followers + 1
+        use.followers = use.followers + 1;
         use.isFollow = true;
         return [...users];
       });
+
       return;
-    };
-      setUser(users => {
-        use.followers = use.followers - 1;
-        use.isFollow = false;
-        return [...users];
-      });
-    
-      // console.log(use.followers)
-      // console.log(users)
-      
-    // });
-    // setIsFollow(true)
+    }
+    setUser(users => {
+      use.followers = use.followers - 1;
+      use.isFollow = false;
+      return [...users];
+    });
   };
 
   return (
     <Cards>
       <UserCard items={users} onClick={onClickHandler} />
-      <Button onClick={LoadMore}>{ac < 12 ? 'Load more' : 'End'}</Button>
+      <Button onClick={LoadMore}>Load more</Button>
     </Cards>
   );
 };

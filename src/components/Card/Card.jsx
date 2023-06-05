@@ -12,7 +12,7 @@ import {
 import logo from '../../images/logo.png';
 
 export const UserCard = ({ items, onClick }) => {
-  console.log(items)
+  // console.log(items);
 
   return (
     <>
@@ -26,7 +26,11 @@ export const UserCard = ({ items, onClick }) => {
             {/* <FollowBtn type="button" onClick={() => onClick(id)}>
               Follow
             </FollowBtn> */}
-            {isFollow ? <FollowingBtn onClick={() => onClick(id)}>Following</FollowingBtn> : <FollowBtn onClick={() => onClick(id)}>Follow</FollowBtn>}
+            {isFollow ? (
+              <FollowingBtn onClick={() => onClick(id)}>Following</FollowingBtn>
+            ) : (
+              <FollowBtn onClick={() => onClick(id)}>Follow</FollowBtn>
+            )}
           </Card>
         ))}
     </>
