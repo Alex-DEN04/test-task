@@ -1,5 +1,3 @@
-// import { useState, useEffect } from 'react';
-
 import {
   FollowingBtn,
   FollowBtn,
@@ -16,7 +14,6 @@ export const UserCard = ({ items, onClick }) => {
     const string = value.toString()
     const firstPart = string.slice(0, 3);
     const secondPart = string.slice(3, string.length);
-    console.log(secondPart)
     const res = `${firstPart},${secondPart}`
     return res
   }
