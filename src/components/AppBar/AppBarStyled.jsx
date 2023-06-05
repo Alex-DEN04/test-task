@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;

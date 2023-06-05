@@ -6,9 +6,9 @@ export const Wrap = styled.section`
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;

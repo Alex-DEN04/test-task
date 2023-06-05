@@ -19,7 +19,7 @@ export const Button = styled.button`
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

@@ -7,7 +7,7 @@ export const Button = styled.button`
   padding: 10px 20px;
   width: 196px;
   height: 50px;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;

@@ -33,22 +33,6 @@ export const Card = styled.li`
       inset 0px -1.71846px 3.43693px #ae7be3,
       inset 0px 3.43693px 2.5777px #fbf8ff;
   }
-  /* ::after {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    z-index: 5;
-    top: 178px;
-    left: auto;
-    
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 8px solid;
-    border-color: #EBD8FF;
-    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
-    background-color: #5736A3;
-    } */
 `;
 
 export const Logo = styled.img`
@@ -75,9 +59,9 @@ export const Avatar = styled.img`
   background-color: #5736a3;
 `;
 export const TweetsCounter = styled.p`
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
@@ -88,9 +72,9 @@ export const TweetsCounter = styled.p`
 `;
 
 export const FollowersCounter = styled.p`
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
@@ -108,7 +92,7 @@ export const FollowingBtn = styled.button`
   gap: 6px;
   width: 196px;
   height: 50px;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -135,7 +119,7 @@ export const FollowBtn = styled.button`
   gap: 6px;
   width: 196px;
   height: 50px;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
