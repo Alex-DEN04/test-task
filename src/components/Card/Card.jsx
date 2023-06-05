@@ -12,7 +12,14 @@ import {
 import logo from '../../images/logo.png';
 
 export const UserCard = ({ items, onClick }) => {
-  // console.log(items);
+  const makeString = (value) => {
+    const string = value.toString()
+    const firstPart = string.slice(0, 3);
+    const secondPart = string.slice(3, string.length);
+    console.log(secondPart)
+    const res = `${firstPart},${secondPart}`
+    return res
+  }
 
   return (
     <>
@@ -21,11 +28,8 @@ export const UserCard = ({ items, onClick }) => {
           <Card key={id}>
             <Logo src={logo} alt="logo" />
             <TweetsCounter>{tweets} tweets</TweetsCounter>
-            <FollowersCounter>{followers} followers</FollowersCounter>
+            <FollowersCounter>{makeString(followers)} followers</FollowersCounter>
             <Avatar src={avatar}></Avatar>
-            {/* <FollowBtn type="button" onClick={() => onClick(id)}>
-              Follow
-            </FollowBtn> */}
             {isFollow ? (
               <FollowingBtn onClick={() => onClick(id)}>Following</FollowingBtn>
             ) : (
