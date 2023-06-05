@@ -26,7 +26,7 @@ export const UsersList = () => {
     });
   };
 
-  const res = (id, data) => {
+  const updateUser = (id, data) => {
     try {
         const putUsers = async () => {
           await addUser(id, data)
@@ -43,7 +43,7 @@ export const UsersList = () => {
       setUser(users => {
         use.followers = use.followers + 1;
         use.isFollow = true;
-        res(id, use)
+        updateUser(id, use)
         return [...users];
       });
       return;
@@ -51,7 +51,7 @@ export const UsersList = () => {
     setUser(users => {
       use.followers = use.followers - 1;
       use.isFollow = false;
-      res(id, use)
+      updateUser(id, use)
       return [...users];
     });
   };
