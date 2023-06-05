@@ -6,7 +6,7 @@ export const AppBar = () => {
   return (
     <Navigate>
       <Link to="/">Home</Link>
-      <Link to="/tweets">Tweets</Link>
+      <Link to="tweets">Tweets</Link>
     </Navigate>
   );
 };
