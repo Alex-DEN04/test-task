@@ -6,3 +6,8 @@ export const fetchUsers = async () => {
   const response = await axios.get('/Users');
   return response.data;
 };
+
+export const addUser = async (id, data) => {
+  const response = await axios.put(`/Users/${id}`, data);
+  return response.data;
+};

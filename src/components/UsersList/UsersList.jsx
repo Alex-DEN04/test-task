@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react';
 
 import { Cards, Button } from './UserListStyled';
 import { UserCard } from 'components/Card/Card';
-import { fetchUsers } from 'API';
+import { fetchUsers, addUser } from 'API';
 
 export const UsersList = () => {
   const [users, setUser] = useState([]);
   const [ac, setAc] = useState(Number((JSON.parse(localStorage.getItem('acum')))) || 3);
-  // (JSON.parse(localStorage.getItem('acum')))
-  // Number((JSON.parse(localStorage.getItem('acum'))))
   useEffect(() => {
     try {
       const getUsers = async () => {
@@ -28,16 +26,16 @@ export const UsersList = () => {
     });
   };
 
-  // const res = (id) => {
-  //   try {
-  //       const addUsers = async () => {
-  //         await postUsers(id)
-  //       }
-  //       addUsers()
-  //     } catch (error) {
-  //       console.log(error)
-  //     }
-  // }
+  const res = (id, data) => {
+    try {
+        const putUsers = async () => {
+          await addUser(id, data)
+        }
+        putUsers()
+      } catch (error) {
+        console.log(error)
+      }
+  }
 
   const onClickHandler = id => {
     const use = users.find(item => item.id === id);
@@ -45,14 +43,15 @@ export const UsersList = () => {
       setUser(users => {
         use.followers = use.followers + 1;
         use.isFollow = true;
+        res(id, use)
         return [...users];
       });
-
       return;
     }
     setUser(users => {
       use.followers = use.followers - 1;
       use.isFollow = false;
+      res(id, use)
       return [...users];
     });
   };
