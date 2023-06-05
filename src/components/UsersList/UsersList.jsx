@@ -19,6 +19,9 @@ export const UsersList = () => {
     }
   }, [ac]);
   const LoadMore = () => {
+    if (ac >= 12) {
+      return
+    }
     setAc(ac => {
       ac+=3
       JSON.stringify(localStorage.setItem('acum', `${ac}`));
