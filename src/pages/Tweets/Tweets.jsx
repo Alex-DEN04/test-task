@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { Button, Wrap } from './TweetsStyled';
 import { UsersList } from 'components/UsersList/UsersList';
@@ -16,4 +17,8 @@ export const Tweets = () => {
       <UsersList />
     </Wrap>
   );
+};
+
+Tweets.propTypes = {
+  onClick: PropTypes.func,
 };
